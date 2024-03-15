@@ -22,11 +22,11 @@ export const Banner = () => {
                      become an exceptionally well world-class Programmer.
                   </p>
 
-                  <button className="btn btn-lg bg-our-primary border-none rounded-full text-base md:text-lg text-our-black w-[190px] mx-2 mb-5 md:mb-none">
+                  <button className="btn btn-lg bg-our-primary rounded-full text-base md:text-lg text-our-black w-[190px] mx-2 mb-5 md:mb-none border border-[#0be58a] hover:bg-transparent hover:text-white hover:border-white">
                      Explore Now
                   </button>
 
-                  <button className="btn btn-lg bg-our-primary border-none rounded-full text-base md:text-lg text-our-black w-[190px] mx-2">
+                  <button className="btn btn-lg bg-our-primary rounded-full text-base md:text-lg text-our-black w-[190px] mx-2 border border-[#0be58a] hover:bg-transparent hover:text-white hover:border-white">
                      Your Feedback
                   </button>
                </div>
