@@ -1,0 +1,89 @@
+[
+   {
+      "recipe_id": 1,
+      "recipe_name": "Spaghetti Bolognese",
+      "recipe_image": "https://i.ibb.co/MpMn53c/Spaghetti-Bolognese.jpg",
+      "description": "Classic Italian pasta dish with savory meat sauce.",
+      "ingredients": [
+         "550 g ground beef",
+         "120 ml tomato sauce",
+         "200 g spaghetti pasta",
+         "50 g grated Parmesan cheese"
+      ],
+      "preparing_time": 30,
+      "calories": 450
+   },
+   {
+      "recipe_id": 2,
+      "recipe_name": "Chicken Stir-Fry",
+      "recipe_image": "https://i.ibb.co/W6V7YhT/Chicken-Stir-Fry.jpg",
+      "description": "A flavorful Asian-inspired dish with tender chicken and fresh vegetables.",
+      "ingredients": [
+         "400 g chicken breast",
+         "120 ml soy sauce",
+         "200 g broccoli florets",
+         "150 g carrots",
+         "100 g bell peppers"
+      ],
+      "preparing_time": 25,
+      "calories": 320
+   },
+   {
+      "recipe_id": 3,
+      "recipe_name": "Vegetable Soup",
+      "recipe_image": "https://i.ibb.co/RTSkWn9/Vegetable-Soup.jpg",
+      "description": "A hearty and nutritious soup packed with assorted vegetables.",
+      "ingredients": [
+         "500 g mixed vegetables (carrots, potatoes, celery, onions)",
+         "1 liter vegetable broth",
+         "100 g pasta",
+         "2 cloves garlic"
+      ],
+      "preparing_time": 40,
+      "calories": 200
+   },
+   {
+      "recipe_id": 4,
+      "recipe_name": "Grilled Salmon",
+      "recipe_image": "https://i.ibb.co/Bjk0RWM/Grilled-Salmon.jpg",
+      "description": "Delicious grilled salmon fillets seasoned with herbs and lemon.",
+      "ingredients": [
+         "4 salmon fillets",
+         "60 ml olive oil",
+         "2 lemons",
+         "2 cloves garlic",
+         "Salt and pepper to taste"
+      ],
+      "preparing_time": 20,
+      "calories": 300
+   },
+   {
+      "recipe_id": 5,
+      "recipe_name": "Caesar Salad",
+      "recipe_image": "https://i.ibb.co/tm3KvBj/Caesar-Salad.jpg",
+      "description": "A classic salad featuring crisp romaine lettuce, croutons, and creamy Caesar dressing.",
+      "ingredients": [
+         "1 head romaine lettuce",
+         "100 g croutons",
+         "50 g grated Parmesan cheese",
+         "120 ml Caesar dressing"
+      ],
+      "preparing_time": 15,
+      "calories": 250
+   },
+   {
+      "recipe_id": 6,
+      "recipe_name": "Beef Tacos",
+      "recipe_image": "https://i.ibb.co/Pm5FBHP/Beef-Tacos.jpg",
+      "description": "Tasty tacos filled with seasoned ground beef, lettuce, cheese, and salsa.",
+      "ingredients": [
+         "500 g ground beef",
+         "12 taco shells",
+         "100 g shredded cheddar cheese",
+         "1 tomato",
+         "1 onion"
+      ],
+      "preparing_time": 35,
+      "calories": 400
+   }
+]
