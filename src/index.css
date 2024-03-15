@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-our-black {
+   color: #150b2b;
+}
+
 .our-primary {
    color: #0be58a;
 }
