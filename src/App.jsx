@@ -1,10 +1,14 @@
 import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
    return (
       <>
-         <h1 className="text-3xl text-red-400">Vite + React</h1>
-         <button className="btn btn-active btn-neutral">Neutral</button>
+         <header className="mx-auto max-w-[1320px] w-[90%] lg:w-[85%] py-3  md:py-4">
+            <Navbar></Navbar>
+         </header>
+
+         <main></main>
       </>
    );
 }
