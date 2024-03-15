@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import CurrentlyCooking from "../CurrentlyCooking/CurrentlyCooking";
 
 const WantCook = (props) => {
    return (
@@ -41,6 +42,8 @@ const WantCook = (props) => {
                </tfoot>
             </table>
          </div>
+
+         <CurrentlyCooking></CurrentlyCooking>
       </div>
    );
 };
