@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { IoTimeOutline } from "react-icons/io5";
 import { SlFire } from "react-icons/sl";
 
-const Recipe = ({ eachRecipe }) => {
+const Recipe = ({ eachRecipe, handleWantCook }) => {
    const {
       calories,
       description,
@@ -55,7 +55,10 @@ const Recipe = ({ eachRecipe }) => {
 
             {/* button */}
             <div className="card-actions">
-               <button className="btn bg-our-primary rounded-full text-our-black border border-[#0be58a] hover:bg-transparent hover:text-our-black hover:border-[#150b2b]">
+               <button
+                  className="btn bg-our-primary rounded-full text-our-black border border-[#0be58a] hover:bg-transparent hover:text-our-black hover:border-[#150b2b]"
+                  onClick={() => handleWantCook(eachRecipe)}
+               >
                   Want to Cook
                </button>
             </div>
@@ -66,6 +69,7 @@ const Recipe = ({ eachRecipe }) => {
 
 Recipe.propTypes = {
    eachRecipe: PropTypes.object.isRequired,
+   handleWantCook: PropTypes.func.isRequired,
 };
 
 export default Recipe;

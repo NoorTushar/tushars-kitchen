@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import Recipe from "../Recipe/Recipe";
 
-const Recipes = ({ recipes }) => {
+const Recipes = ({ recipes, handleWantCook }) => {
    return (
       <div className="md:w-3/5 grid md:grid-cols-2 gap-6 justify-around">
          {/* <Recipe></Recipe>
@@ -14,6 +14,7 @@ const Recipes = ({ recipes }) => {
             return (
                <Recipe
                   key={eachRecipe.recipe_id}
+                  handleWantCook={handleWantCook}
                   eachRecipe={eachRecipe}
                ></Recipe>
             );
@@ -24,6 +25,7 @@ const Recipes = ({ recipes }) => {
 
 Recipes.propTypes = {
    recipes: PropTypes.array.isRequired,
+   handleWantCook: PropTypes.func.isRequired,
 };
 
 export default Recipes;
