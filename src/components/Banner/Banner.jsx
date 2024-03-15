@@ -10,7 +10,7 @@ export const Banner = () => {
             }}
          >
             <div className="hero-overlay bg-black bg-opacity-30 rounded-3xl"></div>
-            <div className="hero-content text-center text-white py-9 md:py-16 px-5 md:px-10 ">
+            <div className="hero-content text-center text-white py-10 md:py-16 px-5 md:px-10 ">
                <div className="max-w-[850px] ">
                   <h1 className="mb-5 text-3xl md:text-5xl font-bold">
                      Discover an exceptional cooking class tailored for you!
