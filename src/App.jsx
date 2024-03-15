@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 import { Banner } from "./components/Banner/Banner";
 import Cart from "./components/Cart/Cart";
@@ -5,6 +6,14 @@ import Navbar from "./components/Navbar/Navbar";
 import Recipes from "./components/Recipes/Recipes";
 
 function App() {
+   const [recipes, setRecipes] = useState([]);
+
+   useEffect(() => {
+      fetch("recipes.json")
+         .then((res) => res.json())
+         .then((data) => setRecipes(data));
+   }, []);
+
    return (
       <>
          <header className="mx-auto max-w-[1320px] w-[90%] lg:w-[85%] py-3  md:py-4">
@@ -28,7 +37,7 @@ function App() {
                </div>
 
                <div className="md:flex space-y-6 md:space-y-0 md:gap-6">
-                  <Recipes></Recipes>
+                  <Recipes recipes={recipes}></Recipes>
                   <Cart></Cart>
                </div>
             </section>

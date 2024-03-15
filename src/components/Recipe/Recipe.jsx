@@ -2,33 +2,36 @@ import PropTypes from "prop-types";
 import { IoTimeOutline } from "react-icons/io5";
 import { SlFire } from "react-icons/sl";
 
-const Recipe = (props) => {
+const Recipe = ({ eachRecipe }) => {
+   const {
+      calories,
+      description,
+      ingredients,
+      preparing_time,
+      recipe_image,
+      recipe_name,
+   } = eachRecipe;
    return (
       <div className="card bg-base-100 shadow-xl border">
          <figure className="px-10 pt-10">
-            <img
-               src="https://i.ibb.co/MpMn53c/Spaghetti-Bolognese.jpg"
-               alt="Shoes"
-               className="rounded-xl"
-            />
+            <img src={recipe_image} alt="Shoes" className="rounded-xl" />
          </figure>
          <div className="card-body">
-            <h2 className="text-xl font-semibold text-our-secondary">Shoes!</h2>
-            <p className="text-our-gray">
-               Classic Italian pasta dish with savory meat sauce.
-            </p>
+            <h2 className="text-xl font-semibold text-our-secondary">
+               {recipe_name}
+            </h2>
+            <p className="text-our-gray">{description}</p>
             <hr className="my-4" />
             <div>
                <h3 className="text-lg font-medium text-our-secondary mb-3">
-                  Ingredients: 6
+                  Ingredients: {ingredients.length}
                </h3>
-               <ul className="list-disc ml-8 space-y-1">
-                  <li className="text-our-gray">500g ground beef </li>
-                  <li className="text-our-gray">500g ground beef </li>
-                  <li className="text-our-gray">500g ground beef </li>
-                  <li className="text-our-gray">500g ground beef </li>
-                  <li className="text-our-gray">500g ground beef </li>
-                  <li className="text-our-gray">500g ground beef </li>
+               <ul className="list-disc ml-5 space-y-1">
+                  {ingredients.map((eachIngredient, index) => (
+                     <li key={index} className="text-our-gray">
+                        {eachIngredient}
+                     </li>
+                  ))}
                </ul>
             </div>
             <hr className="my-4" />
@@ -38,14 +41,14 @@ const Recipe = (props) => {
                <div>
                   <IoTimeOutline />
                   <p className="text-sm">
-                     <span>30</span> minutes
+                     <span>{preparing_time}</span> minutes
                   </p>
                </div>
 
                <div>
                   <SlFire />
                   <p className="text-sm">
-                     <span>30</span> minutes
+                     <span>{calories}</span> calories
                   </p>
                </div>
             </div>
@@ -61,6 +64,8 @@ const Recipe = (props) => {
    );
 };
 
-Recipe.propTypes = {};
+Recipe.propTypes = {
+   eachRecipe: PropTypes.object.isRequired,
+};
 
 export default Recipe;
