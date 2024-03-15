@@ -9,7 +9,7 @@ export const Banner = () => {
                backgroundImage: "url(https://i.ibb.co/wdBZ35b/banner.png)",
             }}
          >
-            <div className="hero-overlay bg-opacity-60 rounded-3xl"></div>
+            <div className="hero-overlay bg-black bg-opacity-30 rounded-3xl"></div>
             <div className="hero-content text-center text-white py-9 md:py-16 px-5 md:px-10 ">
                <div className="max-w-[850px] ">
                   <h1 className="mb-5 text-3xl md:text-5xl font-bold">
@@ -22,7 +22,7 @@ export const Banner = () => {
                      become an exceptionally well world-class Programmer.
                   </p>
 
-                  <button className="btn btn-lg bg-our-primary rounded-full text-base md:text-lg text-our-black w-[190px] mx-2 mb-5 md:mb-none border border-[#0be58a] hover:bg-transparent hover:text-white hover:border-white">
+                  <button className="btn btn-lg bg-our-primary rounded-full text-base md:text-lg text-our-black w-[190px] mx-2 mb-5 md:mb-none border border-[#0be58a] hover:bg-transparent hover:text-white hover:border-white mt-4">
                      Explore Now
                   </button>
 
