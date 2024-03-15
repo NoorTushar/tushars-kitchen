@@ -27,7 +27,7 @@ function App() {
                   </p>
                </div>
 
-               <div className="md:flex">
+               <div className="md:flex space-y-6 md:space-y-0 md:gap-6">
                   <Recipes></Recipes>
                   <Cart></Cart>
                </div>
