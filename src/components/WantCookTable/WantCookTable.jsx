@@ -5,7 +5,7 @@ const WantCookTable = ({ eachWantCookList, index }) => {
    return (
       <tbody>
          <tr>
-            <th>{index}</th>
+            <th className="pl-6">{index}</th>
             <td>{recipe_name}</td>
             <td>{preparing_time}</td>
             <td>{calories}</td>
