@@ -16,8 +16,16 @@ function App() {
    }, []);
 
    const handleWantCook = (recipe) => {
-      const newWantCookList = [...wantCookList, recipe];
-      setWantCookList(newWantCookList);
+      const alreadyExist = wantCookList.find(
+         (item) => item.recipe_id === recipe.recipe_id
+      );
+
+      alreadyExist && alert("exist");
+
+      if (!alreadyExist) {
+         const newWantCookList = [...wantCookList, recipe];
+         setWantCookList(newWantCookList);
+      }
    };
 
    return (

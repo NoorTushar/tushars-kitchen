@@ -23,6 +23,8 @@ const WantCook = ({ wantCookList }) => {
                      <th></th>
                   </tr>
                </thead>
+
+               {/* List Body Dynamic Loop Start*/}
                {wantCookList.map((eachWantCookList, index) => {
                   return (
                      <WantCookTable
@@ -32,6 +34,7 @@ const WantCook = ({ wantCookList }) => {
                      ></WantCookTable>
                   );
                })}
+               {/* List Body Dynamic Loop End*/}
                <tfoot>
                   <tr></tr>
                </tfoot>
