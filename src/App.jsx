@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
    const [recipes, setRecipes] = useState([]);
    const [wantCookList, setWantCookList] = useState([]);
+   const [currentlyCookingList, setCurrentlyCookingList] = useState([]);
 
    useEffect(() => {
       fetch("recipes.json")
@@ -28,6 +29,17 @@ function App() {
          const newWantCookList = [...wantCookList, recipe];
          setWantCookList(newWantCookList);
       }
+   };
+
+   const handlePreparing = (recipeId) => {
+      console.log(`i am preparing now`, recipeId);
+
+      const newWantCookList = wantCookList.filter(
+         (eachWantCookList) => eachWantCookList.recipe_id !== recipeId
+      );
+
+      setWantCookList(newWantCookList);
+      console.log(wantCookList);
    };
 
    return (
@@ -57,7 +69,10 @@ function App() {
                      handleWantCook={handleWantCook}
                      recipes={recipes}
                   ></Recipes>
-                  <Sidebar wantCookList={wantCookList}></Sidebar>
+                  <Sidebar
+                     handlePreparing={handlePreparing}
+                     wantCookList={wantCookList}
+                  ></Sidebar>
                </div>
             </section>
          </main>

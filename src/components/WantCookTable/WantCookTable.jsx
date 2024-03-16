@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 
-const WantCookTable = ({ eachWantCookList, index }) => {
-   const { recipe_name, preparing_time, calories } = eachWantCookList;
+const WantCookTable = ({ eachWantCookList, index, handlePreparing }) => {
+   const { recipe_id, recipe_name, preparing_time, calories } =
+      eachWantCookList;
    return (
       <tbody>
          <tr>
@@ -10,7 +11,10 @@ const WantCookTable = ({ eachWantCookList, index }) => {
             <td>{preparing_time}</td>
             <td>{calories}</td>
             <td>
-               <button className="btn btn-sm bg-our-primary rounded-full text-our-black border border-[#0be58a] hover:bg-transparent hover:text-our-black hover:border-[#150b2b]">
+               <button
+                  className="btn btn-sm bg-our-primary rounded-full text-our-black border border-[#0be58a] hover:bg-transparent hover:text-our-black hover:border-[#150b2b]"
+                  onClick={() => handlePreparing(recipe_id)}
+               >
                   Preparing
                </button>
             </td>

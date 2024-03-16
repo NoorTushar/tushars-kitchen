@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import WantCookTable from "../WantCookTable/WantCookTable";
 
-const WantCook = ({ wantCookList }) => {
+const WantCook = ({ wantCookList, handlePreparing }) => {
    return (
       <div>
          <div className="px-16">
@@ -31,6 +31,7 @@ const WantCook = ({ wantCookList }) => {
                         key={eachWantCookList.recipe_id}
                         eachWantCookList={eachWantCookList}
                         index={index + 1}
+                        handlePreparing={handlePreparing}
                      ></WantCookTable>
                   );
                })}
