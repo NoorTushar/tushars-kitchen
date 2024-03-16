@@ -6,7 +6,10 @@ const CurrentlyCooking = ({ currentlyCookingList }) => {
       <div>
          <div className="px-16 mt-7">
             <h3 className="text-our-secondary text-xl text-center">
-               Currently Cooking: {currentlyCookingList.length}
+               Currently Cooking:{" "}
+               <span className="our-primary">
+                  {currentlyCookingList.length}
+               </span>
             </h3>
             <hr className="my-4" />
          </div>

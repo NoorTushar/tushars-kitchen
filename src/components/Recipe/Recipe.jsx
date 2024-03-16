@@ -24,7 +24,8 @@ const Recipe = ({ eachRecipe, handleWantCook }) => {
             <hr className="my-4" />
             <div>
                <h3 className="text-lg font-medium text-our-secondary mb-3">
-                  Ingredients: {ingredients.length}
+                  Ingredients:{" "}
+                  <span className="our-primary">{ingredients.length}</span>
                </h3>
                <ul className="list-disc ml-5 space-y-1">
                   {ingredients.map((eachIngredient, index) => (

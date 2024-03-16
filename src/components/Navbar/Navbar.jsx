@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import "../../index.css";
 import { FiSearch } from "react-icons/fi";
 import { FaRegUserCircle } from "react-icons/fa";
 
@@ -29,7 +29,7 @@ const Navbar = () => {
                </div>
                <ul
                   tabIndex={0}
-                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 "
                >
                   <li>
                      <a>Item 1</a>
@@ -47,10 +47,15 @@ const Navbar = () => {
                   </li>
                </ul>
             </div>
-            <a className="text-xl md:text-3xl font-bold">Recipe Calories</a>
+            <a
+               href="#"
+               className="text-xl md:text-3xl font-bold hover:text-[#0be58a] duration-300 cursor-pointer"
+            >
+               <span className="our-primary">Tushar's</span> Kitchen
+            </a>
          </div>
          <div className="navbar-center hidden lg:flex">
-            <ul className="space-x-8 menu-horizontal px-1 opacity-70 text-lg">
+            <ul className="space-x-8 menu-horizontal px-1 opacity-70 text-lg header-navbar">
                <li>
                   <a>Home</a>
                </li>

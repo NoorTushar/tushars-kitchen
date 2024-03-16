@@ -20,6 +20,10 @@
    color: #0be58a;
 }
 
+.text-our-primary {
+   color: #0be58a;
+}
+
 .bg-our-primary {
    background-color: #0be58a;
 }
@@ -27,4 +31,44 @@
 body {
    font-family: "Lexend", sans-serif;
    color: #150b2b;
+}
+
+.header-navbar li a {
+   padding: 7px 0;
+   position: relative;
+   cursor: pointer;
+   transition: all 0.3s;
+}
+.header-navbar li a:hover {
+   color: #0be58a;
+}
+
+.header-navbar li a::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 0%;
+   height: 3px;
+   background-color: #0be58a;
+   transition: 0.3s;
+}
+
+.header-navbar li a:hover::before {
+   width: 100%;
+}
+
+.header-navbar li a::after {
+   content: "";
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   width: 0%;
+   height: 3px;
+   background-color: #0be58a;
+   transition: 0.3s;
+}
+
+.header-navbar li a:hover::after {
+   width: 100%;
 }
