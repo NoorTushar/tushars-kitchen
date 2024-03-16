@@ -35,9 +35,25 @@ const CurrentlyCooking = ({ currentlyCookingList }) => {
                   <tr className="">
                      <th></th>
                      <th></th>
-                     <th className="text-wrap">Total time = 30 minutes</th>
                      <th className="text-wrap">
-                        Total Calories = 1050 calories
+                        Total time ={" "}
+                        {currentlyCookingList.reduce(
+                           (totalTime, currentItem) => {
+                              return totalTime + currentItem.preparing_time;
+                           },
+                           0
+                        )}{" "}
+                        minutes
+                     </th>
+                     <th className="text-wrap">
+                        Total Calories ={" "}
+                        {currentlyCookingList.reduce(
+                           (totalTime, currentItem) => {
+                              return totalTime + currentItem.calories;
+                           },
+                           0
+                        )}{" "}
+                        calories
                      </th>
                   </tr>
                </tfoot>
