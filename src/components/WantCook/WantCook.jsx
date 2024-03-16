@@ -47,6 +47,7 @@ const WantCook = ({ wantCookList, handlePreparing }) => {
 
 WantCook.propTypes = {
    wantCookList: PropTypes.array.isRequired,
+   handlePreparing: PropTypes.func.isRequired,
 };
 
 export default WantCook;

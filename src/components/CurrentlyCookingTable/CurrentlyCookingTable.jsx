@@ -5,7 +5,7 @@ const CurrentlyCookingTable = ({ index, eachCurrentlyCooking }) => {
    return (
       <tbody>
          <tr>
-            <th>{index}</th>
+            <th className="pl-6">{index}</th>
             <td>{recipe_name}</td>
             <td>{preparing_time}</td>
             <td>{calories}</td>
@@ -16,6 +16,7 @@ const CurrentlyCookingTable = ({ index, eachCurrentlyCooking }) => {
 
 CurrentlyCookingTable.propTypes = {
    eachCurrentlyCooking: PropTypes.object.isRequired,
+   index: PropTypes.number.isRequired,
 };
 
 export default CurrentlyCookingTable;

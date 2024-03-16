@@ -25,6 +25,8 @@ const WantCookTable = ({ eachWantCookList, index, handlePreparing }) => {
 
 WantCookTable.propTypes = {
    eachWantCookList: PropTypes.object.isRequired,
+   index: PropTypes.number.isRequired,
+   handlePreparing: PropTypes.func.isRequired,
 };
 
 export default WantCookTable;
