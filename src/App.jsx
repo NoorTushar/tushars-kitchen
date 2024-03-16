@@ -4,6 +4,8 @@ import { Banner } from "./components/Banner/Banner";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Navbar from "./components/Navbar/Navbar";
 import Recipes from "./components/Recipes/Recipes";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
    const [recipes, setRecipes] = useState([]);
@@ -20,7 +22,7 @@ function App() {
          (item) => item.recipe_id === recipe.recipe_id
       );
 
-      alreadyExist && alert("exist");
+      alreadyExist && toast.info("You have already selected this recipe.");
 
       if (!alreadyExist) {
          const newWantCookList = [...wantCookList, recipe];
@@ -59,6 +61,7 @@ function App() {
                </div>
             </section>
          </main>
+         <ToastContainer />
       </>
    );
 }
