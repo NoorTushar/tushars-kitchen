@@ -1,18 +1,17 @@
 import PropTypes from "prop-types";
-import CurrentlyCooking from "../CurrentlyCooking/CurrentlyCooking";
+import WantCookTable from "../WantCookTable/WantCookTable";
 
-const WantCook = (props) => {
+const WantCook = ({ wantCookList }) => {
    return (
       <div>
          <div className="px-16">
             <h3 className="text-our-secondary text-xl text-center">
-               Want to Cook: 01
+               Want to Cook: {wantCookList.length}
             </h3>
             <hr className="my-4" />
          </div>
 
          {/* table */}
-
          <div className="overflow-x-auto">
             <table className="table table-xs text-our-gray">
                <thead className="">
@@ -24,30 +23,26 @@ const WantCook = (props) => {
                      <th></th>
                   </tr>
                </thead>
-               <tbody>
-                  <tr>
-                     <th>1</th>
-                     <td>Cy Ganderton</td>
-                     <td>Quality Control Specialist</td>
-                     <td>Quality Control Specialist</td>
-                     <td>
-                        <button className="btn btn-sm bg-our-primary rounded-full text-our-black border border-[#0be58a] hover:bg-transparent hover:text-our-black hover:border-[#150b2b]">
-                           Preparing
-                        </button>
-                     </td>
-                  </tr>
-               </tbody>
+               {wantCookList.map((eachWantCookList, index) => {
+                  return (
+                     <WantCookTable
+                        key={eachWantCookList.recipe_id}
+                        eachWantCookList={eachWantCookList}
+                        index={index + 1}
+                     ></WantCookTable>
+                  );
+               })}
                <tfoot>
                   <tr></tr>
                </tfoot>
             </table>
          </div>
-
-         <CurrentlyCooking></CurrentlyCooking>
       </div>
    );
 };
 
-WantCook.propTypes = {};
+WantCook.propTypes = {
+   wantCookList: PropTypes.array.isRequired,
+};
 
 export default WantCook;

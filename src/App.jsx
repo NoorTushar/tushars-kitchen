@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { Banner } from "./components/Banner/Banner";
-import Cart from "./components/Cart/Cart";
+import Sidebar from "./components/Sidebar/Sidebar";
 import Navbar from "./components/Navbar/Navbar";
 import Recipes from "./components/Recipes/Recipes";
 
@@ -47,7 +47,7 @@ function App() {
                      handleWantCook={handleWantCook}
                      recipes={recipes}
                   ></Recipes>
-                  <Cart></Cart>
+                  <Sidebar wantCookList={wantCookList}></Sidebar>
                </div>
             </section>
          </main>
