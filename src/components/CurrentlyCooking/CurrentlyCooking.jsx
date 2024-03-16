@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
+import CurrentlyCookingTable from "../CurrentlyCookingTable/CurrentlyCookingTable";
 
-const CurrentlyCooking = (props) => {
+const CurrentlyCooking = ({ currentlyCookingList }) => {
    return (
       <div>
          <div className="px-16 mt-7">
             <h3 className="text-our-secondary text-xl text-center">
-               Currently Cooking: 03
+               Currently Cooking: {currentlyCookingList.length}
             </h3>
             <hr className="my-4" />
          </div>
@@ -21,33 +22,20 @@ const CurrentlyCooking = (props) => {
                      <th>Calories</th>
                   </tr>
                </thead>
-               <tbody>
-                  <tr>
-                     <th>1</th>
-                     <td>Cy Ganderton</td>
-                     <td>Quality Control Specialist</td>
-                     <td>Littel, Schaden and Vandervort</td>
-                  </tr>
-
-                  <tr>
-                     <th>1</th>
-                     <td>Cy Ganderton</td>
-                     <td>Quality Control Specialist</td>
-                     <td>Littel, Schaden and Vandervort</td>
-                  </tr>
-
-                  <tr>
-                     <th>1</th>
-                     <td>Cy Ganderton</td>
-                     <td>Quality Control Specialist</td>
-                     <td>Littel, Schaden and Vandervort</td>
-                  </tr>
-               </tbody>
+               {currentlyCookingList.map((eachCurrentlyCooking, index) => {
+                  return (
+                     <CurrentlyCookingTable
+                        key={eachCurrentlyCooking.recipe_id}
+                        index={index + 1}
+                        eachCurrentlyCooking={eachCurrentlyCooking}
+                     ></CurrentlyCookingTable>
+                  );
+               })}
                <tfoot>
                   <tr className="">
                      <th></th>
                      <th></th>
-                     <th className="text-wrap">Total time = 45 minutes</th>
+                     <th className="text-wrap">Total time = 30 minutes</th>
                      <th className="text-wrap">
                         Total Calories = 1050 calories
                      </th>
@@ -59,6 +47,8 @@ const CurrentlyCooking = (props) => {
    );
 };
 
-CurrentlyCooking.propTypes = {};
+CurrentlyCooking.propTypes = {
+   currentlyCookingList: PropTypes.array.isRequired,
+};
 
 export default CurrentlyCooking;

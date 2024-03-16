@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import WantCook from "../WantCook/WantCook";
+import CurrentlyCooking from "../CurrentlyCooking/CurrentlyCooking";
 
 const Sidebar = ({ wantCookList, handlePreparing, currentlyCookingList }) => {
    return (
@@ -8,7 +9,9 @@ const Sidebar = ({ wantCookList, handlePreparing, currentlyCookingList }) => {
             handlePreparing={handlePreparing}
             wantCookList={wantCookList}
          ></WantCook>
-         <h2>Currently Cooking: {currentlyCookingList.length}</h2>
+         <CurrentlyCooking
+            currentlyCookingList={currentlyCookingList}
+         ></CurrentlyCooking>
       </div>
    );
 };
