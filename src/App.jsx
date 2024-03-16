@@ -66,9 +66,10 @@ function App() {
                      Our <span className="our-primary">R</span>ecipes
                   </h2>
                   <p className="opacity-60  md:text-lg max-w-[800px] mx-auto">
-                     Lorem ipsum dolor sit amet consectetur. Proin et feugiat
-                     senectus vulputate netus pharetra rhoncus. Eget urna
-                     volutpat curabitur elementum mauris aenean neque.
+                     Explore our recipe collection filled with tasty dishes for
+                     every mealtime. From simple snacks to satisfying dinners,
+                     we've got something to please every palate. Our recipes are
+                     easy to follow and guaranteed to impress.
                   </p>
                </div>
 
