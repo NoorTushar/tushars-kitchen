@@ -13,7 +13,7 @@ const WantCookTable = ({ eachWantCookList, index, handlePreparing }) => {
             <td>
                <button
                   className="btn btn-sm bg-our-primary rounded-full text-our-black border border-[#0be58a] hover:bg-transparent hover:text-our-black hover:border-[#150b2b]"
-                  onClick={() => handlePreparing(recipe_id)}
+                  onClick={() => handlePreparing(recipe_id, eachWantCookList)}
                >
                   Preparing
                </button>

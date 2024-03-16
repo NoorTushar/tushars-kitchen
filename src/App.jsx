@@ -31,8 +31,16 @@ function App() {
       }
    };
 
-   const handlePreparing = (recipeId) => {
+   const handlePreparing = (recipeId, eachWantCookList) => {
       console.log(`i am preparing now`, recipeId);
+      console.log(`the recipe selected is `, eachWantCookList);
+
+      const newCurrentlyCookingList = [
+         ...currentlyCookingList,
+         eachWantCookList,
+      ];
+
+      setCurrentlyCookingList(newCurrentlyCookingList);
 
       const newWantCookList = wantCookList.filter(
          (eachWantCookList) => eachWantCookList.recipe_id !== recipeId
@@ -72,6 +80,7 @@ function App() {
                   <Sidebar
                      handlePreparing={handlePreparing}
                      wantCookList={wantCookList}
+                     currentlyCookingList={currentlyCookingList}
                   ></Sidebar>
                </div>
             </section>
