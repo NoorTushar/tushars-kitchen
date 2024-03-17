@@ -13,13 +13,13 @@ const WantCook = ({ wantCookList, handlePreparing }) => {
          </div>
 
          {/* table */}
-         <div className="overflow-x-auto">
+         <div className="overflow-x-auto ">
             <table className="table table-xs text-our-gray">
                <thead className="">
-                  <tr>
-                     <th></th>
+                  <tr className="*:border bg-green-100 text-center text-our-black h-10">
+                     <th>#</th>
                      <th>Name</th>
-                     <th>Time (mins)</th>
+                     <th className="text-wrap">Time (mins)</th>
                      <th>Calories</th>
                      <th></th>
                   </tr>
