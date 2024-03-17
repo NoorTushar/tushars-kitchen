@@ -13,7 +13,7 @@ const Recipe = ({ eachRecipe, handleWantCook }) => {
    } = eachRecipe;
    return (
       <div className="card bg-base-100 shadow-xl border">
-         <figure className="px-10 pt-10">
+         <figure className="px-8 pt-8">
             <img src={recipe_image} alt="Shoes" className="rounded-xl" />
          </figure>
          <div className="card-body">

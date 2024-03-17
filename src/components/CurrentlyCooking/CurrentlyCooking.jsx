@@ -21,7 +21,7 @@ const CurrentlyCooking = ({ currentlyCookingList }) => {
                   <tr>
                      <th></th>
                      <th>Name</th>
-                     <th>Time</th>
+                     <th>Time (mins)</th>
                      <th>Calories</th>
                   </tr>
                </thead>

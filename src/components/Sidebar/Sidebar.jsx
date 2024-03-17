@@ -4,7 +4,7 @@ import CurrentlyCooking from "../CurrentlyCooking/CurrentlyCooking";
 
 const Sidebar = ({ wantCookList, handlePreparing, currentlyCookingList }) => {
    return (
-      <div className="md:w-2/5 border rounded-2xl py-10 h-min">
+      <div className="md:w-1/2 lg:w-2/5 border rounded-2xl py-10 h-min">
          <WantCook
             handlePreparing={handlePreparing}
             wantCookList={wantCookList}

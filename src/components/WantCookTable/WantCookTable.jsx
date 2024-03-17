@@ -7,10 +7,10 @@ const WantCookTable = ({ eachWantCookList, index, handlePreparing }) => {
       <tbody>
          <tr>
             <th className="pl-6">{index}</th>
-            <td>{recipe_name}</td>
+            <td className="text-wrap">{recipe_name}</td>
             <td>{preparing_time}</td>
             <td>{calories}</td>
-            <td>
+            <td className="text-wrap">
                <button
                   className="btn btn-sm bg-our-primary rounded-full text-our-black border border-[#0be58a] hover:bg-transparent hover:text-our-black hover:border-[#150b2b]"
                   onClick={() => handlePreparing(recipe_id, eachWantCookList)}

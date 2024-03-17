@@ -19,7 +19,7 @@ const WantCook = ({ wantCookList, handlePreparing }) => {
                   <tr>
                      <th></th>
                      <th>Name</th>
-                     <th>Time</th>
+                     <th>Time (mins)</th>
                      <th>Calories</th>
                      <th></th>
                   </tr>
