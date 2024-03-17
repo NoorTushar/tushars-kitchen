@@ -23,7 +23,7 @@ function App() {
          (item) => item.recipe_id === recipe.recipe_id
       );
 
-      alreadyExist && toast.info("You have already selected this recipe.");
+      alreadyExist && toast.error("You have already selected this recipe.");
 
       if (!alreadyExist) {
          const newWantCookList = [...wantCookList, recipe];
