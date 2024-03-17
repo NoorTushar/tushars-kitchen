@@ -32,9 +32,6 @@ function App() {
    };
 
    const handlePreparing = (recipeId, eachWantCookList) => {
-      console.log(`i am preparing now`, recipeId);
-      console.log(`the recipe selected is `, eachWantCookList);
-
       const newCurrentlyCookingList = [
          ...currentlyCookingList,
          eachWantCookList,
@@ -47,7 +44,6 @@ function App() {
       );
 
       setWantCookList(newWantCookList);
-      console.log(wantCookList);
    };
 
    return (
