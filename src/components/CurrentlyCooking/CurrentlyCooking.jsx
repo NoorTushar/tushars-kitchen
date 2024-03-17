@@ -18,10 +18,10 @@ const CurrentlyCooking = ({ currentlyCookingList }) => {
          <div className="overflow-x-auto">
             <table className="table table-xs text-our-gray">
                <thead>
-                  <tr>
-                     <th></th>
+                  <tr className="*:border bg-green-100 text-center text-our-black h-10">
+                     <th>#</th>
                      <th>Name</th>
-                     <th>Time (mins)</th>
+                     <th className="text-wrap">Time (mins)</th>
                      <th>Calories</th>
                   </tr>
                </thead>
@@ -35,9 +35,8 @@ const CurrentlyCooking = ({ currentlyCookingList }) => {
                   );
                })}
                <tfoot>
-                  <tr className="">
-                     <th></th>
-                     <th></th>
+                  <tr className="*:border bg-green-100 text-center text-our-black min-h-10">
+                     <th colSpan={2}></th>
                      <th className="text-wrap">
                         Total time ={" "}
                         {currentlyCookingList.reduce(

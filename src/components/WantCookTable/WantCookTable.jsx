@@ -5,7 +5,7 @@ const WantCookTable = ({ eachWantCookList, index, handlePreparing }) => {
       eachWantCookList;
    return (
       <tbody>
-         <tr className="bg-green-50 *:border *:min-h-1 *:py-2">
+         <tr className="bg-green-50 *:border *:py-2">
             <th className="text-center">{index}</th>
             <td className="text-wrap">{recipe_name}</td>
             <td className="text-center">{preparing_time}</td>
