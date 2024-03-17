@@ -7,7 +7,7 @@ const CurrentlyCooking = ({ currentlyCookingList }) => {
          <div className="px-16 mt-7">
             <h3 className="text-our-secondary text-xl text-center">
                Currently Cooking:{" "}
-               <span className="our-primary">
+               <span className="text-green-600">
                   {currentlyCookingList.length}
                </span>
             </h3>

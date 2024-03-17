@@ -7,7 +7,7 @@ const WantCook = ({ wantCookList, handlePreparing }) => {
          <div className="px-16">
             <h3 className="text-our-secondary text-xl text-center">
                Want to Cook:{" "}
-               <span className="our-primary">{wantCookList.length}</span>
+               <span className="text-green-600">{wantCookList.length}</span>
             </h3>
             <hr className="my-4" />
          </div>
